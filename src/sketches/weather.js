@@ -6,20 +6,23 @@ function setup() {
    '&APPID=7bbbb47522848e8b9c26ba35c226c734&units=metric';
    var functionType = drawWindSpeed;
 
+   loadJSON(url, drawHeader);
    loadJSON(url, drawWindSpeed);
    loadJSON(url, drawHumidity);
    loadJSON(url, drawTemp);
-   loadJSON(url, drawHeader);
 }
 
 function draw() {
   background(200);
+}
 
-  if (mouseIsPressed) {
-    functionType = drawWeather;
-  } else {
-    functionType = drawWindSpeed;
-  }
+function drawHeader(weather) {
+  var header = weather.name + ' Weather';
+
+  fill('#424242');
+  textSize(18);
+  textAlign(CENTER);
+  text(header, width/2, 50);
 }
 
 function drawHumidity(weather) {
@@ -58,15 +61,6 @@ function drawTemp(weather) {
   textAlign(CENTER);
   text(tempText, 550, height/3);
   ellipse(550, height/2, 100, 100);
-}
-
-function drawHeader(weather) {
-  var header = weather.name + ' Weather';
-
-  fill('#424242');
-  textSize(18);
-  textAlign(CENTER);
-  text(header, width/2, 50);
 }
 
 function keyPressed() {
