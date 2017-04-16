@@ -4475,6 +4475,10 @@ react-scripts:
   optionalDependencies:
     fsevents "1.0.17"
 
+react-scrollchor:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-scrollchor/-/react-scrollchor-2.2.0.tgz#ca6b21962ca4bde85216041250b47d438a351e6c"
+
 react-snapshot:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/react-snapshot/-/react-snapshot-1.0.4.tgz#57cf3e756cf02c1031f295e135e0819c5bc38dcb"

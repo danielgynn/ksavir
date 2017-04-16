@@ -8,7 +8,8 @@ class Navigation extends Component {
         <Link to="/"><h1>Ksavir</h1></Link>
 
         <div>
-          <Link to="/sketches">Sketches</Link>
+          <Link to="/perlin">Perlin</Link>
+          <Link to="/sandsplines">Sandsplines</Link>
         </div>
       </nav>
     )

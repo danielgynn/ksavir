@@ -6,11 +6,15 @@ body {
 }
 
 header {
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 nav {
   margin: 1rem;
+}
+
+p {
+  margin: .25rem 0;
 }
 
 nav a {
@@ -19,6 +23,22 @@ nav a {
 
 h1 {
   margin: 0;
+}
+
+.index {
+  height: 100vh;
+}
+
+.index header {
+  margin: 0;
+}
+
+.index h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-weight: 300;
 }
 
 .flex {
@@ -38,11 +58,7 @@ h1 {
   justify-content: space-between;
 }
 
-nav {
-  margin-bottom: 2rem;
-}
-
 canvas {
   margin: 1rem;
-  border: 2px solid black;
+  /*border: 2px solid black;*/
 }
