@@ -34,7 +34,7 @@ h1 {
 }
 
 .index h1 {
-  font-size: 3rem;
+  /*font-size: 3rem;*/
 }
 
 h2 {
@@ -58,7 +58,36 @@ h2 {
   justify-content: space-between;
 }
 
+.flex-grow {
+  flex: 1 1 auto;
+}
+
+.gallery-index {
+  background-color: #424242;
+  color: white;
+}
+
+.gallery-index a {
+  color: white;
+}
+
 canvas {
   margin: 1rem;
   /*border: 2px solid black;*/
+}
+
+.img-container {
+  width: 250px;
+}
+
+.gallery-img {
+  width: 500px;
+}
+
+.m1 {
+  margin: 1rem;
+}
+
+.m2 {
+  margin: 2rem;
 }

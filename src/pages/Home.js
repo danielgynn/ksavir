@@ -18,13 +18,13 @@ class Home extends Component {
         <main id="main" className="index flex flex-center flex-column">
           <Header heading={this.state.heading} subhead={this.state.subhead}/>
           <p>Check out the <Link to="/perlin">Perlin</Link>.</p>
-          <Scrollchor to="#about" animate={{offset: 20, duration: 600}} className="nav-link">Read More</Scrollchor>
+          <Scrollchor to="#about" animate={{offset: 10, duration: 300}} className="nav-link">Read More</Scrollchor>
         </main>
 
         <section id="about" className="index flex flex-center flex-column">
           <header className="flex flex-center flex-column">
             <h1>The Ksavir Art Generator Project</h1>
-            <Scrollchor to="#main" animate={{offset: 20, duration: 600}} className="nav-link">Back to Top</Scrollchor>
+            <Scrollchor to="#main" animate={{offset: 10, duration: 300}} className="nav-link">Back to Top</Scrollchor>
           </header>
           <p>This project is heavily influenced by the work of Dan Eden and Incovergent.</p>
           <p>The system is built using React and p5.js, a JavaScript extension of the Processing project.</p>

@@ -10,6 +10,10 @@ class Navigation extends Component {
         <div>
           <Link to="/perlin">Perlin</Link>
           <Link to="/sandsplines">Sandsplines</Link>
+          <Link to="/joy">Joy</Link>
+          <Link to="/playground">Playground</Link>
+          <Link to="/abstract">Abstract</Link>
+          <Link to="/gallery">Gallery</Link>
         </div>
       </nav>
     )

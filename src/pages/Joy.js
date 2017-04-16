@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import P5Wrapper from 'react-p5-wrapper';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
-import perlin from '../sketches/perlin';
+import joy from '../sketches/joy';
 
-class Perlin extends Component {
+class Joy extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-      heading: 'Perlin Noise Generator',
+      heading: 'Deep Joy',
       subhead: 'Reload the page to redraw, or press ENTER to save.'
 		};
 	}
@@ -21,7 +21,7 @@ class Perlin extends Component {
         <main>
           <Header heading={this.state.heading} subhead={this.state.subhead}/>
           <section className="flex flex-center">
-            <P5Wrapper sketch={perlin} />
+            <P5Wrapper sketch={joy} />
           </section>
         </main>
       </div>
@@ -29,4 +29,4 @@ class Perlin extends Component {
   }
 }
 
-export default Perlin;
+export default Joy;
