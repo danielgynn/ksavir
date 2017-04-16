@@ -1,0 +1,25 @@
+{
+  "name": "ksavir",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": {
+    "url": "git@github.com:danielgynn/p5-processing.git",
+    "type": "git"
+  },
+  "author": "danielgynn <danielgynn@hotmail.co.uk>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-snapshot": "^1.0.4"
+  },
+  "devDependencies": {
+    "react-scripts": "^0.9.5"
+  },
+  "scripts": {
+    "start": "react-scripts build && react-snapshot && react-scripts start",
+    "build": "react-scripts build && react-snapshot",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

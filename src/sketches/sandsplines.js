@@ -1,8 +1,10 @@
 function setup() {
+  var canvas = createCanvas(800, 500);
+  canvas.parent('sketch-holder');
+
   noLoop();
   noFill();
   colorMode(HSB);
-  createCanvas(800, 500);
   smooth(2);
   pixelDensity(displayDensity());
   background(100);
