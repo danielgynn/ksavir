@@ -1,28 +1,33 @@
-function setup() {
-  createCanvas(640, 480);
-}
-
-function draw() {
-  xoff = 0;
-  inc = 0.02;
-
-  background(25);
-  stroke(100);
-  for(i = -2; i < height * 2; i += 4) {
-    len = (noise(xoff) * width) / 1.5;
-    line((width / 1.8) - (len / 2) - i / 2, i, (width / 1.8) + (len / 2), i / 2);
-    xoff+=inc;
+export default function perlin (p) {
+  p.setup = function(props) {
+    p.createCanvas(640, 480);
+    p.redraw();
   }
 
-  noLoop();
-}
+  p.myCustomRedrawAccordingToNewPropsHandler = function (props) {
+      if (props.redraw){
+        p.redraw();
+      }
+    };
 
-function keyPressed() {
-  if (keyCode === ENTER) {
-    saveCanvas('perlin', 'jpg');
+  p.draw = function() {
+    var xoff = 0;
+    var inc = 0.02;
+
+    p.background(25);
+    p.stroke(100);
+    for(var i = -2; i < p.height * 2; i += 4) {
+      var len = (p.noise(xoff) * p.width) / 1.5;
+      p.line((p.width / 1.8) - (len / 2) - i / 2, i, (p.width / 1.8) + (len / 2), i / 2);
+      xoff+=inc;
+    }
+
+    p.noLoop();
   }
-}
 
-function mousePressed() {
-  redraw(5);
+  p.keyPressed = function() {
+    if (p.keyCode === p.ENTER) {
+      p.saveCanvas('perlin', 'jpg');
+    }
+  }
 }

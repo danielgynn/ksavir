@@ -1,7 +1,20 @@
 body {
   font-family: Helvetica, sans-serif;
+  font-size: 14px;
   padding: 0;
   margin: 0;
+}
+
+header {
+  margin: 2rem auto;
+}
+
+nav {
+  margin: 1rem;
+}
+
+nav a {
+  padding: 0 .5rem;
 }
 
 h1 {
@@ -21,10 +34,15 @@ h1 {
   flex-direction: column;
 }
 
+.flex-space {
+  justify-content: space-between;
+}
+
 nav {
   margin-bottom: 2rem;
 }
 
 canvas {
+  margin: 1rem;
   border: 2px solid black;
 }

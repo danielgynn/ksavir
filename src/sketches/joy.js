@@ -1,44 +1,46 @@
-function setup() {
-  createCanvas(500, 500);
-  pixelDensity(displayDensity());
-  background(20);
-  strokeWeight(2);
-  stroke(255);
-  smooth();
-}
-
-function u(n) {
-  return width / 100 * n;
-}
-
-function draw() {
-  xoff = 0;
-  yoff = 1000;
-
-  background(20);
-
-  for(y = height * 0.1; y < height * 0.9; y += u(1.5)) {
-    push();
-    translate(0, y);
-    noFill();
-    beginShape();
-    for(x = width*0.1; x < width*0.9; x++) {
-      ypos = map(noise(x/100 + xoff, y/100 + yoff), 0, 1, -100, 100);
-      magnitude = x < width*0.5 ? map(x, width*0.1, width*0.5, 0, 1) : map(x, width*0.5, width*0.9, 1, 0) ;
-      ypos *= magnitude;
-      if(ypos > 0) ypos = 0;
-      vertex(x, ypos);
-    }
-    endShape();
-    pop();
+export default function joy (p) {
+  p.setup = function() {
+    p.createCanvas(500, 500);
+    p.pixelDensity(p.displayDensity());
+    p.background(20);
+    p.strokeWeight(2);
+    p.stroke(255);
+    p.smooth();
   }
 
-  xoff += 0.01;
-  yoff += -0.01;
-}
+  p.u = function(n) {
+    return p.width / 100 * n;
+  }
 
-function keyPressed() {
-  if (keyCode === ENTER) {
-    saveCanvas('deep-joy', 'jpg');
+  p.draw = function() {
+    var xoff = 0;
+    var yoff = 1000;
+
+    p.background(20);
+
+    for(var y = p.height * 0.1; y < p.height * 0.9; y += p.u(1.5)) {
+      p.push();
+      p.translate(0, y);
+      p.noFill();
+      p.beginShape();
+      for(var x = p.width*0.1; x < p.width*0.9; x++) {
+        var ypos = p.map(p.noise(x/100 + xoff, y/100 + yoff), 0, 1, -100, 100);
+        var magnitude = x < p.width*0.5 ? p.map(x, p.width*0.1, p.width*0.5, 0, 1) : p.map(x, p.width*0.5, p.width*0.9, 1, 0) ;
+        ypos *= magnitude;
+        if(ypos > 0) ypos = 0;
+        p.vertex(x, ypos);
+      }
+      p.endShape();
+      p.pop();
+    }
+
+    xoff += 0.01;
+    yoff += -0.01;
+  }
+
+  p.keyPressed = function() {
+    if (p.keyCode === p.ENTER) {
+      p.saveCanvas('deep-joy', 'jpg');
+    }
   }
 }

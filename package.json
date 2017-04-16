@@ -11,6 +11,7 @@
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-p5-wrapper": "^0.0.4",
     "react-snapshot": "^1.0.4"
   },
   "devDependencies": {
