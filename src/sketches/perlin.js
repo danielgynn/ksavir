@@ -12,10 +12,10 @@ export default function perlin (p) {
 
   p.draw = function() {
     var xoff = 0;
-    var inc = 0.02;
+    var inc = 0.035;
 
-    p.background(25);
-    p.stroke(100);
+    p.background(35);
+    p.stroke(200);
     for(var i = -2; i < p.height * 2; i += 4) {
       var len = (p.noise(xoff) * p.width) / 1.5;
       p.line((p.width / 1.8) - (len / 2) - i / 2, i, (p.width / 1.8) + (len / 2), i / 2);

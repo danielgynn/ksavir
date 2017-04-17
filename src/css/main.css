@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
+
 body {
-  font-family: Helvetica, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   padding: 0;
   margin: 0;
@@ -63,9 +65,15 @@ h2 {
 }
 
 .gallery-index {
+  background-image: url('http://i.imgur.com/DCvaC4z.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-color: #424242;
   color: white;
 }
+
+.gallery-index h1 { font-size: 4rem; }
 
 .gallery-index a {
   color: white;
@@ -76,12 +84,40 @@ canvas {
   /*border: 2px solid black;*/
 }
 
+.wrap {
+  margin: 0rem auto;
+  max-width: 30rem;
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    max-width: 20rem;
+  }
+}
+
+.home-page {
+  color: white;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home-page h1 { font-size: 4rem; }
+
+.home-page a {
+  color: white;
+}
+
 .img-container {
   width: 250px;
 }
 
 .gallery-img {
   width: 500px;
+}
+
+.gallery-page {
+  /*background-color: whitesmoke;*/
 }
 
 .m1 {
@@ -91,3 +127,8 @@ canvas {
 .m2 {
   margin: 2rem;
 }
+
+.my1 { margin: 1rem 0; }
+.my2 { margin: 2rem 0; }
+.mx1 { margin: 0 1rem; }
+.mx2 { margin: 0 2rem; }

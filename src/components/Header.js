@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <header className="flex flex-center flex-column">
         <h1>{this.props.heading}</h1>
-        <p>{this.props.subhead}</p>
+        <p className="mx2">{this.props.subhead}</p>
       </header>
     )
   }

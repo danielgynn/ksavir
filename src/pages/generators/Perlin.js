@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import P5Wrapper from 'react-p5-wrapper';
-import Navigation from '../components/Navigation';
-import Header from '../components/Header';
-import abstract from '../sketches/abstract';
+import Navigation from '../../components/Navigation';
+import Header from '../../components/Header';
+import perlin from '../../sketches/perlin';
 
-class Abstract extends Component {
+class Perlin extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-      heading: 'Abstract',
+      heading: 'Perlin Noise Generator',
       subhead: 'Reload the page to redraw, or press ENTER to save.'
 		};
 	}
@@ -21,7 +21,7 @@ class Abstract extends Component {
         <main>
           <Header heading={this.state.heading} subhead={this.state.subhead}/>
           <section className="flex flex-center">
-            <P5Wrapper sketch={abstract} />
+            <P5Wrapper sketch={perlin} />
           </section>
         </main>
       </div>
@@ -29,4 +29,4 @@ class Abstract extends Component {
   }
 }
 
-export default Abstract;
+export default Perlin;

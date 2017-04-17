@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
-import Scrollchor from 'react-scrollchor';
 
 class Home extends Component {
   constructor(props) {
@@ -14,21 +13,11 @@ class Home extends Component {
 
   render() {
     return (
-      <div>
-        <main id="main" className="index flex flex-center flex-column">
-          <Header heading={this.state.heading} subhead={this.state.subhead}/>
-          <p>Check out the <Link to="/perlin">Perlin</Link>.</p>
-          <Scrollchor to="#about" animate={{offset: 10, duration: 300}} className="nav-link">Read More</Scrollchor>
+      <div className="">
+        <main id="main" className="home-page index flex flex-center flex-column">
+            <Header heading={this.state.heading} subhead={this.state.subhead}/>
+            <p className="m2">Check out the <Link to="/gallery">Gallery</Link>, the <Link to="/generators">Generators</Link> or <Link to="/about">Read More</Link> about the project.</p>
         </main>
-
-        <section id="about" className="index flex flex-center flex-column">
-          <header className="flex flex-center flex-column">
-            <h1>The Ksavir Art Generator Project</h1>
-            <Scrollchor to="#main" animate={{offset: 10, duration: 300}} className="nav-link">Back to Top</Scrollchor>
-          </header>
-          <p>This project is heavily influenced by the work of Dan Eden and Incovergent.</p>
-          <p>The system is built using React and p5.js, a JavaScript extension of the Processing project.</p>
-        </section>
       </div>
     )
   }

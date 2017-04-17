@@ -32,7 +32,7 @@ export default function sandsplines (p) {
   }
 
   p.u = function(uu) {
-    return (p.width / 100) * uu;
+    return (p.width / 60) * uu;
   }
 
   p.drawLine = function(x1, x2, volatility) {

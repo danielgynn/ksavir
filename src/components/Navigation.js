@@ -5,15 +5,12 @@ class Navigation extends Component {
   render() {
     return (
       <nav className="flex flex-space">
-        <Link to="/"><h1>Ksavir</h1></Link>
+        <Link to="/">Ksavir</Link>
 
         <div>
-          <Link to="/perlin">Perlin</Link>
-          <Link to="/sandsplines">Sandsplines</Link>
-          <Link to="/joy">Joy</Link>
-          <Link to="/playground">Playground</Link>
-          <Link to="/abstract">Abstract</Link>
+          <Link to="/about">About</Link>
           <Link to="/gallery">Gallery</Link>
+          <Link to="/generators">Generators</Link>
         </div>
       </nav>
     )
