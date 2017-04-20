@@ -19,12 +19,13 @@ class Flowfield extends Component {
       sketchValue: flowField5,
       value: 'flowField5',
       clearable: false,
+      desc: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly and render their opacity as they go.',
       options: [
         { value: 'flowField1', label: 'Flow Field 1', func: flowField1 },
-        { value: 'flowField2', label: 'Flow Field 2', func: flowField2 },
+        { value: 'flowField2', label: 'Flow Field 2', func: flowField2, desc: 'The second iteration shows the particle system on top of the Perlin Noise Flow. The particle system will be later used to generate the visual aspects of this piece, whereas the background noise will not be rendered as a line, but there purely to give the flowing effect.' },
         { value: 'flowField3', label: 'Flow Field 3', func: flowField3 },
         { value: 'flowField4', label: 'Flow Field 4', func: flowField4 },
-        { value: 'flowField5', label: 'Flow Field 5', func: flowField5 }
+        { value: 'flowField5', label: 'Flow Field 5', func: flowField5, desc: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly and render their opacity as they go.' }
       ]
 		};
 	}
@@ -32,7 +33,8 @@ class Flowfield extends Component {
   changeSketch(val) {
     this.setState({
       sketchValue: val.func,
-      value: val.value
+      value: val.value,
+      desc: val.desc
     });
   }
 
@@ -41,9 +43,10 @@ class Flowfield extends Component {
       <div>
         <Navigation />
 
-        <main>
-          <Header heading={this.state.heading} subhead={this.state.subhead}/>
-          <div className="wrap">
+        <main className="wrap">
+          <Header heading={this.state.heading} />
+          <p>{this.state.subhead}</p>
+          <p>{this.state.desc}</p>
             <Select
               name="form-field-name"
               clearable={this.state.clearable}
@@ -51,7 +54,6 @@ class Flowfield extends Component {
               options={this.state.options}
               onChange={this.changeSketch}
             />
-          </div>
           <section className="flex flex-center">
             <P5Wrapper sketch={this.state.sketchValue} />
           </section>

@@ -1,4 +1,4 @@
-export default function rotator (p) {
+export default function rotator (p, width) {
   var rotation   = 0; // This is just to keep track of the current rotation
   var noOfLines = 52;  // Change me! The total number of lines drawn
   var squareSize = 450; // Change me! The size of the square

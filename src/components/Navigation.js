@@ -4,8 +4,10 @@ import { Link } from 'react-router-dom';
 class Navigation extends Component {
   render() {
     return (
-      <nav className="flex flex-space">
-        <Link to="/">Ksavir</Link>
+      <nav className="flex flex-space flex-items">
+        <div>
+          <Link to="/" className="nav-title">Ksavir</Link>
+        </div>
 
         <div>
           <Link to="/about">About</Link>

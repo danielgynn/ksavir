@@ -15,8 +15,9 @@ class Home extends Component {
     return (
       <div className="">
         <main id="main" className="home-page index flex flex-center flex-column">
-            <Header heading={this.state.heading} subhead={this.state.subhead}/>
-            <p className="m2">Check out the <Link to="/gallery">Gallery</Link>, the <Link to="/generators">Generators</Link> or <Link to="/about">Read More</Link> about the project.</p>
+          <h1 className="app-title fadeIn mx2">{this.state.heading}</h1>
+          <h3 className="fadeIn mx1">{this.state.subhead}</h3>
+          <p className="fadeIn m1">Check out the <Link to="/gallery">Gallery</Link>, the <Link to="/generators">Generators</Link> or <Link to="/about">Read More</Link> about the project.</p>
         </main>
       </div>
     )

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Navigation from '../components/Navigation';
 import Header from '../components/Header';
-import { Link } from 'react-router-dom';
+import Generator from '../components/Generator';
 
 class Generators extends Component {
   constructor(props) {
@@ -18,13 +18,13 @@ class Generators extends Component {
         <Navigation />
         <Header heading={this.state.heading} subhead={this.state.subhead}/>
 
-        <div className="wrap flex flex-column">
-          <Link to="/perlin">Perlin</Link>
-          <Link to="/sandsplines">Sandsplines</Link>
-          <Link to="/joy">Joy</Link>
-          <Link to="/triangular">Triangular</Link>
-          <Link to="/flowfield">Perlin Flow Field</Link>
-          <Link to="/rotator">Rotator</Link>
+        <div className="flex flex-column wrap">
+          <Generator title="Perlin" link="/perlin" desc="A Rorschach generator built using Perlin noise to render lines." />
+          <Generator title="Sandsplines" link="/sandsplines" desc="Renders horizontal lines that gradually increase in noise. Based on the concept of B-splines."/>
+          <Generator title="Joy" link="/joy" desc="A Perlin noise and B-spline rendering of the Joy Division album cover 'Unknown Pleasures'."/>
+          <Generator title="Triangular" link="/triangular" />
+          <Generator title="Perlin Flow Field" link="/flowfield" />
+          <Generator title="Rotator" link="/rotator" />
         </div>
       </div>
     )
