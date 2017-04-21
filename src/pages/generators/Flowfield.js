@@ -47,13 +47,13 @@ class Flowfield extends Component {
           <Header heading={this.state.heading} />
           <p>{this.state.subhead}</p>
           <p>{this.state.desc}</p>
-            <Select
-              name="form-field-name"
-              clearable={this.state.clearable}
-              value={this.state.value}
-              options={this.state.options}
-              onChange={this.changeSketch}
-            />
+          <Select
+            name="form-field-name"
+            clearable={this.state.clearable}
+            value={this.state.value}
+            options={this.state.options}
+            onChange={this.changeSketch}
+          />
           <section className="flex flex-center">
             <P5Wrapper sketch={this.state.sketchValue} />
           </section>

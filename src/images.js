@@ -26,6 +26,12 @@ const images = [
     height: 500
   },
   {
+    src: 'http://i.imgur.com/GNOtfsT.png',
+    title: 'perlin4.png',
+    width: 600,
+    height: 500
+  },
+  {
     src: 'http://i.imgur.com/q0J4sND.jpg',
     title: 'sandsplines1.jpg',
     desc: 'Sandsplines',

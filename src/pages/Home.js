@@ -7,7 +7,7 @@ class Home extends Component {
 		super(props);
 		this.state = {
       heading: 'Ksavir',
-      subhead: 'A Generative Art Project by Daniel Gynn, built with p5.js and React.'
+      subhead: 'A Generative Art Project by Daniel Gynn.'
 		};
 	}
 
@@ -17,7 +17,11 @@ class Home extends Component {
         <main id="main" className="home-page index flex flex-center flex-column">
           <h1 className="app-title fadeIn mx2">{this.state.heading}</h1>
           <h3 className="fadeIn mx1">{this.state.subhead}</h3>
-          <p className="fadeIn m1">Check out the <Link to="/gallery">Gallery</Link>, the <Link to="/generators">Generators</Link> or <Link to="/about">Read More</Link> about the project.</p>
+          <nav className="fadeIn m1">
+            <Link to="/about" className="">About</Link>
+            <Link to="/gallery" className="">Gallery</Link>
+            <Link to="/generators" className="">Generators</Link>
+          </nav>
         </main>
       </div>
     )

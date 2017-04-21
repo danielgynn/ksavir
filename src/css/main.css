@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500');
-/*@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700');*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700');
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -13,7 +13,7 @@ header {
 }
 
 nav {
-  margin: 1rem;
+  margin: 1rem 1rem 2rem;
 }
 
 .app-title {
@@ -50,6 +50,17 @@ nav a {
   background-color: inherit;
   padding: .5rem !important;
   min-height: 50px;
+  text-transform: uppercase;
+  border-radius: 1px;
+}
+
+.home-page nav a {
+  color: white !important;
+  margin: 0 .5rem;
+}
+
+.home-page nav a:hover {
+  background-color: #879eb0;
 }
 
 .gen-obj {
@@ -62,7 +73,7 @@ nav a {
   transition: background-color .2s ease-in-out;
 }
 
-.gen-obj h2 {
+.gen-obj h2, .gen-obj p {
   margin: 0;
 }
 
@@ -85,7 +96,9 @@ nav a {
 }
 
 p {
-  margin: 0 0 18px;
+  margin: 0 0 16px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
 }
 
 nav a {
@@ -115,6 +128,9 @@ h1 {
 
 h2 {
   font-weight: 300;
+  text-transform: uppercase;
+  color: #424242;
+  margin: .25rem 0;
 }
 
 .flex {
@@ -223,3 +239,13 @@ h1 {
 .my2 { margin: 2rem 0; }
 .mx1 { margin: 0 1rem; }
 .mx2 { margin: 0 2rem; }
+
+blockquote {
+  /*font-family: 'Merriweather', serif;*/
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}

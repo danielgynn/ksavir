@@ -25,6 +25,7 @@ class Generators extends Component {
           <Generator title="Triangular" link="/triangular" />
           <Generator title="Perlin Flow Field" link="/flowfield" />
           <Generator title="Rotator" link="/rotator" />
+          <Generator title="Acceleration" link="/acceleration" />
         </div>
       </div>
     )
