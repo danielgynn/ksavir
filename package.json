@@ -2,7 +2,7 @@
   "name": "ksavir",
   "version": "1.0.0",
   "main": "index.js",
-  "homepage": "http://danielgynn.github.io/ksavir",
+  "homepage": "https://ksavir.herokuapp.com",
   "repository": {
     "url": "git@github.com:danielgynn/ksavir.git",
     "type": "git"
