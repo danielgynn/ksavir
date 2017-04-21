@@ -1,14 +1,28 @@
 {
   "name": "ksavir",
+  "author": "danielgynn",
   "version": "1.0.0",
   "main": "index.js",
+  "license": "MIT",
   "homepage": "https://ksavir.herokuapp.com",
   "repository": {
     "url": "git@github.com:danielgynn/ksavir.git",
     "type": "git"
   },
-  "author": "danielgynn",
-  "license": "MIT",
+  "engines": {
+    "node": "4.4.7"
+  },
+  "keywords": [
+    "react",
+    "heroku"
+  ],
+  "scripts": {
+    "start": "react-scripts build && react-snapshot && react-scripts start",
+    "predeploy": "react-scripts build && react-snapshot",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
+  },
   "dependencies": {
     "p5": "^0.5.8",
     "react": "^15.5.4",
@@ -23,12 +37,5 @@
   },
   "devDependencies": {
     "react-scripts": "^0.9.5"
-  },
-  "scripts": {
-    "start": "react-scripts build && react-snapshot && react-scripts start",
-    "predeploy": "react-scripts build && react-snapshot",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
   }
 }
