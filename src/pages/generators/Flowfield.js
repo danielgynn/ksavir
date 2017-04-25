@@ -8,6 +8,7 @@ import flowField2 from '../../sketches/flowfield/flow-field2';
 import flowField3 from '../../sketches/flowfield/flow-field3';
 import flowField4 from '../../sketches/flowfield/flow-field4';
 import flowField5 from '../../sketches/flowfield/flow-field5';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class Flowfield extends Component {
   constructor(props) {
@@ -38,6 +39,10 @@ class Flowfield extends Component {
     });
   }
 
+  refreshPage() {
+    window.location.reload();
+  }
+
   render() {
     return (
       <div>
@@ -47,13 +52,16 @@ class Flowfield extends Component {
           <Header heading={this.state.heading} />
           <p>{this.state.subhead}</p>
           <p>{this.state.desc}</p>
-          <Select
-            name="form-field-name"
-            clearable={this.state.clearable}
-            value={this.state.value}
-            options={this.state.options}
-            onChange={this.changeSketch}
-          />
+          <div className="flex flex-space">
+            <Select
+              name="form-field-name"
+              clearable={this.state.clearable}
+              value={this.state.value}
+              options={this.state.options}
+              onChange={this.changeSketch}
+            />
+            <button onClick={this.refreshPage}>Refresh</button>
+          </div>
           <section className="flex flex-center">
             <P5Wrapper sketch={this.state.sketchValue} />
           </section>
