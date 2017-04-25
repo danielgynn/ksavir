@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:300,400,400i,700');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  margin: 1rem auto;
+}
+
+nav {
+  margin: 1rem 1rem 2rem;
+}
+
+.app-title {
+  /*font-family: 'Merriweather', serif;*/
+  text-transform: uppercase;
+  color: white !important;
+  text-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
+.fadeIn {
+  -webkit-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	-moz-animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	animation: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+.nav-title,
+h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #424242;
+  text-shadow: none;
+}
+
+nav a:hover {
+  color: #212121;
+  background-color: #dbdbdb;
+}
+
+nav a {
+  transition: all .2s ease-in-out;
+  color: #424242 !important;
+  text-decoration: none;
+  background-color: inherit;
+  padding: .5rem !important;
+  min-height: 50px;
+  text-transform: uppercase;
+  border-radius: 1px;
+}
+
+.home-page nav a {
+  color: white !important;
+  margin: 0 .5rem;
+}
+
+.home-page nav a:hover {
+  background-color: #879eb0;
+}
+
+.gen-obj {
+  width: 100%;
+  min-height: 50px;
+  text-decoration: none;
+  color: black;
+  padding: .5rem;
+  background-color: inherit;
+  transition: background-color .2s ease-in-out;
+}
+
+.gen-obj h2, .gen-obj p {
+  margin: 0;
+}
+
+@media (max-width: 750px) {
+  .flex-mobile {
+    flex-direction: column;
+  }
+
+  .home-page h1 {
+    font-size: 4rem !important;
+  }
+}
+
+.gen-obj a {
+
+}
+
+.gen-obj:hover {
+  background-color: #dbdbdb;
+}
+
+p {
+  margin: 0 0 16px;
+  line-height: 1.58;
+  letter-spacing: -.003em;
+}
+
+nav a {
+  padding: 0 .5rem;
+}
+
+.canvas-style {
+  width: 700px;
+  height: 450px;
+}
+
+h1 {
+  margin: 0;
+}
+
+.index {
+  height: 100vh;
+}
+
+.index header {
+  margin: 0;
+}
+
+.index h1 {
+  /*font-size: 3rem;*/
+}
+
+h2 {
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #424242;
+  margin: .25rem 0;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-items {
+  align-items: center;
+}
+
+.flex-content {
+  justify-content: center;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-space {
+  justify-content: space-between;
+}
+
+.flex-grow {
+  flex: 1 1 auto;
+}
+
+.gallery-index {
+  background-image: url('http://i.imgur.com/DCvaC4z.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #424242;
+  color: white;
+}
+
+.gallery-index h1 { font-size: 4rem; }
+
+.gallery-index a {
+  color: white;
+}
+
+canvas {
+  margin: 1rem;
+  /*border: 2px solid black;*/
+}
+
+.wrap {
+  margin: 0rem auto;
+  max-width: 35rem;
+}
+
+@media (max-width: 600px) {
+  .wrap {
+    max-width: 20rem;
+  }
+}
+
+.home-page {
+  color: white;
+  background: #141E30;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.home-page h1 { font-size: 6rem; }
+
+h1 {
+  text-transform: uppercase;
+}
+
+.home-page a {
+  color: white;
+}
+
+.img-container {
+  width: 250px;
+}
+
+.gallery-img {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.gallery-page {
+  /*background-color: whitesmoke;*/
+}
+
+.m1 {
+  margin: 1rem;
+}
+
+.m2 {
+  margin: 2rem;
+}
+
+.my1 { margin: 1rem 0; }
+.my2 { margin: 2rem 0; }
+.mx1 { margin: 0 1rem; }
+.mx2 { margin: 0 2rem; }
+
+blockquote {
+  /*font-family: 'Merriweather', serif;*/
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding-left: 15px;
+  border-left: 3px solid #ccc;
+}
