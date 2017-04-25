@@ -14,7 +14,8 @@
   },
   "keywords": [
     "react",
-    "heroku"
+    "heroku",
+    "p5.js"
   ],
   "scripts": {
     "start": "react-scripts build && react-snapshot && react-scripts start",
