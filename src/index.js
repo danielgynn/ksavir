@@ -1,7 +1,9 @@
 import React from 'react';
-import { render } from 'react-snapshot';
+import ReactDOM from 'react-dom';
 import App from './App';
-import './css/animista.css';
-import './css/main.css';
+import './index.css';
 
-render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <App />,
+  document.getElementById('root')
+);
