@@ -1,10 +1,31 @@
 {
   "name": "ksavir",
-  "version": "0.1.0",
-  "private": true,
+  "author": "danielgynn",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "homepage": "https://ksavir.herokuapp.com",
+  "repository": {
+    "url": "git@github.com:danielgynn/ksavir.git",
+    "type": "git"
+  },
+  "engines": {
+    "node": "4.4.7"
+  },
+  "keywords": [
+    "react",
+    "heroku"
+  ],
   "dependencies": {
+    "p5": "^0.5.8",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-images": "^0.5.2",
+    "react-p5-wrapper": "^0.0.4",
+    "react-photo-gallery": "^5.3.0",
+    "react-router-dom": "^4.1.1",
+    "react-scrollchor": "^2.2.0",
+    "react-select": "^1.0.0-rc.3"
   },
   "devDependencies": {
     "react-scripts": "0.9.5"
