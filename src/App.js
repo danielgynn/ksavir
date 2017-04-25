@@ -19,17 +19,17 @@ class App extends Component {
       <Router>
         <div>
           <Route exact path="/" component={Home}/>
-          <Route path="/about" component={About} />
-          <Route path="/gallery" component={Gallery}/>
-          <Route path="/generators" component={Generators}/>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/gallery" component={Gallery}/>
+          <Route exact path="/generators" component={Generators}/>
 
-          <Route path="/perlin" component={Perlin}/>
-          <Route path="/sandsplines" component={Sandsplines}/>
-          <Route path="/joy" component={Joy}/>
-          <Route path="/triangular" component={Triangular}/>
-          <Route path="/flowfield" component={Flowfield}/>
-          <Route path="/rotator" component={Rotator}/>
-          <Route path="/acceleration" component={Acceleration} />
+          <Route exact path="/perlin" component={Perlin}/>
+          <Route exact path="/sandsplines" component={Sandsplines}/>
+          <Route exact path="/joy" component={Joy}/>
+          <Route exact path="/triangular" component={Triangular}/>
+          <Route exact path="/flowfield" component={Flowfield}/>
+          <Route exact path="/rotator" component={Rotator}/>
+          <Route exact path="/acceleration" component={Acceleration} />
         </div>
       </Router>
     )
