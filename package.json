@@ -25,6 +25,7 @@
     "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "express": "^4.15.2",
     "p5": "^0.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
