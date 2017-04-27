@@ -1,7 +1,7 @@
 import p5 from 'p5';
 // import Particle from './particle.js';
 
-export default function flowField3 (p) {
+export default function flowField4 (p) {
   var inc = 0.1;
   var scale = 10;
   var cols, rows;
@@ -14,6 +14,7 @@ export default function flowField3 (p) {
     this.vel = p.createVector(0, 0);
     this.acc = p.createVector(0, 0);
     this.maxspeed = 2;
+    this.prevPos = this.pos.copy();
 
     this.update = function() {
       this.vel.add(this.acc);
@@ -38,7 +39,7 @@ export default function flowField3 (p) {
     this.show = function() {
       p.stroke(0, 5);
       p.strokeWeight(2);
-      p.point(this.pos.x, this.pos.y);
+      p.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
     }
 
     this.edges = function() {
@@ -77,7 +78,7 @@ export default function flowField3 (p) {
         xoff += inc;
 
         p.stroke(0, 50);
-        p.strokeWeight(2);
+        p.strokeWeight(1);
       }
 
       yoff += inc;

@@ -37,17 +37,34 @@ export default function flowField4 (p) {
     }
 
     this.show = function() {
-      p.stroke(0, 5);
+      p.stroke(0, 9);
       p.strokeWeight(2);
-      // p.point(this.pos.x, this.pos.y);
       p.line(this.pos.x, this.pos.y, this.prevPos.x, this.prevPos.y);
+      this.updatePrev();
+    }
+
+    this.updatePrev = function() {
+      this.prevPos.x = this.pos.x;
+      this.prevPos.y = this.pos.y;
     }
 
     this.edges = function() {
-      if (this.pos.x > p.width) this.pos.x = 0;
-      if (this.pos.x < 0) this.pos.x = p.width;
-      if (this.pos.y > p.height) this.pos.x = 0;
-      if (this.pos.y < 0) this.pos.x = p.height;
+      if (this.pos.x > p.width) {
+        this.pos.x = 0;
+        this.updatePrev();
+      }
+      if (this.pos.x < 0) {
+        this.pos.x = p.width;
+        this.updatePrev();
+      }
+      if (this.pos.y > p.height) {
+        this.pos.x = 0;
+        this.updatePrev();
+      }
+      if (this.pos.y < 0) {
+        this.pos.x = p.height;
+        this.updatePrev();
+      }
     }
   }
 
@@ -58,7 +75,7 @@ export default function flowField4 (p) {
 
     flowField = new Array(cols * rows);
 
-    for (var i = 0; i < 500; i++) {
+    for (var i = 0; i < 2000; i++) {
       particles[i] = new Particle();
     }
     p.background(255);
@@ -80,11 +97,6 @@ export default function flowField4 (p) {
 
         p.stroke(0, 50);
         p.strokeWeight(1);
-        // p.push();
-        // p.translate(x * scale, y * scale);
-        // p.rotate(v.heading());
-        // p.line(0, 0, scale, 0);
-        // p.pop();
       }
 
       yoff += inc;
@@ -94,8 +106,8 @@ export default function flowField4 (p) {
     for (var i = 0; i < particles.length; i++) {
       particles[i].follow(flowField);
       particles[i].update();
-      particles[i].show();
       particles[i].edges();
+      particles[i].show();
     }
   }
 
