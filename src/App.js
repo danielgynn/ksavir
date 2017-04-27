@@ -10,7 +10,6 @@ import Joy from './pages/generators/Joy';
 import Triangular from './pages/generators/Triangular';
 import Flowfield from './pages/generators/Flowfield';
 import Rotator from './pages/generators/Rotator';
-import Acceleration from './pages/generators/Acceleration';
 import 'react-select/dist/react-select.css';
 
 class App extends Component {
@@ -29,7 +28,6 @@ class App extends Component {
           <Route exact path="/triangular" component={Triangular}/>
           <Route exact path="/flowfield" component={Flowfield}/>
           <Route exact path="/rotator" component={Rotator}/>
-          <Route exact path="/acceleration" component={Acceleration} />
         </div>
       </Router>
     )

@@ -94,6 +94,22 @@ nav a {
   background-color: #879eb0;
 }
 
+button {
+  width: 100px;
+  background-color: white;
+  color: #424242;
+  border: 1px solid #424242;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: .8rem;
+}
+
+button:hover {
+  box-shadow: 1px 1px 1px rgba(150, 150, 150, 1);
+}
+
 .gen-obj {
   width: 100%;
   min-height: 50px;

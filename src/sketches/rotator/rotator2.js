@@ -1,8 +1,8 @@
 export default function rotator (p, width) {
-  var rotation   = 0; // This is just to keep track of the current rotation
-  var noOfLines = 52;  // Change me! The total number of lines drawn
-  var squareSize = 450; // Change me! The size of the square
-  var circleSize = 350; // Change me! The size of the circle
+  var rotation   = 0;
+  var noOfLines = 100;
+  var squareSize = 450;
+  var circleSize = 350;
   var halfSquare = squareSize / 2;
   var circleRadius = circleSize / 2;
   var pointsAlongSquare = p.createVector(p.width/2, p.height/2);
@@ -46,11 +46,11 @@ export default function rotator (p, width) {
     // Draw a series of points along the circle and then draw a line to each
     // point on the square
     for(var i = 0; i < noOfLines; i++) {
-      var angle = p.radians((i / noOfLines) * 360) * 10;
-      var point = p.createVector(p.sin(angle) * (p.width/2), p.cos(angle) * (p.height/2));
+      var angle = p.radians((i / noOfLines) * 720);
+      var point = p.createVector(p.sin(angle/2) * (p.width/2), p.cos(angle/2) * (p.height/2));
 
       var origin = pointsAlongSquare.set(p.round(i)).copy();
-      origin.mult(-1);
+      origin.mult(50);
       point.limit(circleRadius);
       point.rotate(rotation);
       p.line(origin.x, origin.y, point.x, point.y);
@@ -61,7 +61,7 @@ export default function rotator (p, width) {
 
   p.keyPressed = function() {
     if (p.keyCode === p.ENTER) {
-      p.saveCanvas('rotator', 'png');
+      p.saveCanvas('rotator2', 'png');
     }
   }
 }

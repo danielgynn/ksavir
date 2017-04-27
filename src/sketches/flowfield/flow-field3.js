@@ -77,12 +77,7 @@ export default function flowField3 (p) {
         xoff += inc;
 
         p.stroke(0, 50);
-        p.strokeWeight(1);
-        // p.push();
-        // p.translate(x * scale, y * scale);
-        // p.rotate(v.heading());
-        // p.line(0, 0, scale, 0);
-        // p.pop();
+        p.strokeWeight(2);
       }
 
       yoff += inc;

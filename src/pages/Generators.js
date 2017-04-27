@@ -24,8 +24,7 @@ class Generators extends Component {
           <Generator title="Joy" link="/joy" desc="A Perlin noise and B-spline rendering of the Joy Division album cover 'Unknown Pleasures'."/>
           <Generator title="Triangular" link="/triangular" />
           <Generator title="Perlin Flow Field" link="/flowfield" />
-          <Generator title="Rotator" link="/rotator" />
-          <Generator title="Acceleration" link="/acceleration" />
+          <Generator title="Rotator" link="/rotator" desc="Renders a 3D circular object consisting of lines rotating from specific points." />
         </div>
       </div>
     )
