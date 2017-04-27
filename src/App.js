@@ -22,12 +22,12 @@ class App extends Component {
           <Route exact path="/gallery" component={Gallery}/>
           <Route exact path="/generators" component={Generators}/>
 
-          <Route exact path="/perlin" component={Perlin}/>
-          <Route exact path="/sandsplines" component={Sandsplines}/>
-          <Route exact path="/joy" component={Joy}/>
-          <Route exact path="/triangular" component={Triangular}/>
-          <Route exact path="/flowfield" component={Flowfield}/>
-          <Route exact path="/rotator" component={Rotator}/>
+          <Route exact path="/generators/perlin" component={Perlin}/>
+          <Route exact path="/generators/sandsplines" component={Sandsplines}/>
+          <Route exact path="/generators/joy" component={Joy}/>
+          <Route exact path="/generators/triangular" component={Triangular}/>
+          <Route exact path="/generators/flowfield" component={Flowfield}/>
+          <Route exact path="/generators/rotator" component={Rotator}/>
         </div>
       </Router>
     )

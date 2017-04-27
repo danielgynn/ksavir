@@ -8,7 +8,6 @@ import flowField2 from '../../sketches/flowfield/flow-field2';
 import flowField3 from '../../sketches/flowfield/flow-field3';
 import flowField4 from '../../sketches/flowfield/flow-field4';
 import flowField5 from '../../sketches/flowfield/flow-field5';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class Flowfield extends Component {
   constructor(props) {
