@@ -7,6 +7,7 @@ import flowField1 from '../../sketches/flowfield/flow-field1';
 import flowField2 from '../../sketches/flowfield/flow-field2';
 import flowField3 from '../../sketches/flowfield/flow-field3';
 import flowField4 from '../../sketches/flowfield/flow-field4';
+import flowField5 from '../../sketches/flowfield/flow-field5';
 
 class Flowfield extends Component {
   constructor(props) {
@@ -14,16 +15,17 @@ class Flowfield extends Component {
     this.changeSketch = this.changeSketch.bind(this);
 		this.state = {
       heading: 'Perlin Flow Field',
-      subhead: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly, following from their previous position and render their opacity as they go. Resembles the spread of smoke or blood.',
-      sketchValue: flowField4,
-      value: 'flowField4',
+      subhead: 'Reload the page to redraw the canvas, or press ENTER to save the output.',
+      sketchValue: flowField5,
+      value: 'flowField5',
       clearable: false,
-      desc: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly and render their opacity as they go.',
+      desc: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly, following from their previous position and render their opacity as they go. This final iteration resembles the spread of water or blood.',
       options: [
         { value: 'flowField1', label: 'Flow Field 1', func: flowField1, desc: 'The first iteration simply displays the random noise values as small lines. Resembles a \'grass in the wind\' appearance.' },
         { value: 'flowField2', label: 'Flow Field 2', func: flowField2, desc: 'The second iteration shows the particle system on top of the Perlin Noise Flow. The particle system will be later used to generate the visual aspects of this piece, whereas the background noise will not be rendered as a line, but there purely to give the flowing effect.' },
         { value: 'flowField3', label: 'Flow Field 3', func: flowField3, desc: 'The third iteration shows a working Perlin Flow Field, including the particle system working in the background. This example shows the strokes jumping about randomly, as they are not yet following on from their previous position. This example resembles pencil scratchings on a page.' },
-        { value: 'flowField4', label: 'Flow Field 4', func: flowField4, desc: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly, following from their previous position and render their opacity as they go. Resembles the spread of smoke or blood.' }
+        { value: 'flowField4', label: 'Flow Field 4', func: flowField4, desc: 'The fourth iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly, following from their previous position and render their opacity as they go. Resembles the spread of smoke.' },
+        { value: 'flowField5', label: 'Flow Field 5', func: flowField5, desc: 'The final iteration shows a fully working Perlin Noise Flow Field. The particles jump from one location to another randomly, following from their previous position and render their opacity as they go. This final iteration resembles the spread of water or blood.' }
       ]
 		};
 	}
