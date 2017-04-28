@@ -51,12 +51,6 @@ const images = [
     height: 450
   },
   {
-    src: 'http://i.imgur.com/zkrxi7F.png',
-    title: 'triangular.png',
-    width: 700,
-    height: 450
-  },
-  {
     src: 'http://i.imgur.com/HiQhQ32.png',
     title: 'perlin-flow.png',
     width: 700,

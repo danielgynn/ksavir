@@ -11,7 +11,7 @@ class Perlin extends Component {
 		super(props);
     this.changeSketch = this.changeSketch.bind(this);
 		this.state = {
-      heading: 'Perlin Noise Generator',
+      heading: 'Perlin Noise Line Generator',
       subhead: 'Reload the page to redraw, or press ENTER to save.',
       sketchValue: perlin1,
       value: 'perlin1',
