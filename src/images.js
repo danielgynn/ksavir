@@ -91,6 +91,46 @@ const images = [
     title: 'rotator2.png',
     width: 700,
     height: 450
+  },
+  {
+    src: 'http://i.imgur.com/X8UmVUc.png',
+    width: 700,
+    height: 450
+  },
+  {
+    src: 'http://i.imgur.com/NZ8qANZ.png',
+    width: 700,
+    height: 450
+  },
+  {
+    src: 'http://i.imgur.com/quHmwgL.jpg',
+    width: 600,
+    height: 500
+  },
+  {
+    src: 'http://i.imgur.com/nUapnzf.jpg',
+    width: 700,
+    height: 450
+  },
+  {
+    src: 'http://i.imgur.com/kJ2FZZp.png',
+    width: 700,
+    height: 450
+  },
+  {
+    src: 'http://i.imgur.com/9KUJeDi.png',
+    width: 700,
+    height: 450
+  },
+  {
+    src: 'http://i.imgur.com/IdSsA7L.jpg',
+    width: 700,
+    height: 450
+  },
+  {
+    src: 'http://i.imgur.com/HDqFjHw.png',
+    width: 700,
+    height: 450
   }
 ]
 
