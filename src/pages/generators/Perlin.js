@@ -16,10 +16,10 @@ class Perlin extends Component {
       sketchValue: perlin1,
       value: 'perlin1',
       clearable: false,
-      desc: '',
+      desc: 'Renders an array of horizontal lines with a random Perlin length value. Sonewhat resembles a Rorschach test.',
       options: [
-        { value: 'perlin1', label: 'Perlin Noise Horizontal', func: perlin1 },
-        { value: 'perlin2', label: 'Perlin Noise Vertical', func: perlin2, desc: '' }
+        { value: 'perlin1', label: 'Perlin Noise Horizontal', func: perlin1, desc: 'Renders an array of horizontal lines with a random Perlin length value. Somewhat resembles a Rorschach test, or a 3D fabric-like effect.' },
+        { value: 'perlin2', label: 'Perlin Noise Vertical', func: perlin2, desc: 'Renders an array of diagonal/vertical lines with a random Perlin length value.' }
       ]
 		};
 	}
@@ -38,7 +38,9 @@ class Perlin extends Component {
         <Navigation />
 
         <main className="wrap">
-          <Header heading={this.state.heading} subhead={this.state.subhead}/>
+          <Header heading={this.state.heading} />
+          <p>{this.state.subhead}</p>
+          <p>{this.state.desc}</p>
           <Select
             name="form-field-name"
             clearable={this.state.clearable}

@@ -12,7 +12,7 @@ class Rotator extends Component {
     this.changeSketch = this.changeSketch.bind(this);
 		this.state = {
       heading: 'Rotator',
-      subhead: 'Reload the page to redraw, or press ENTER to save the canvas.',
+      subhead: 'Reload the page to redraw the canvas, or press ENTER to save the output.',
       sketchValue: rotator2,
       value: 'rotator2',
       clearable: false,

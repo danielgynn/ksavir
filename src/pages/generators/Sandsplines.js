@@ -18,11 +18,12 @@ class Sandsplines extends Component {
       sketchValue: sandsplines4,
       value: 'sandsplines4',
       clearable: false,
+      desc: 'The final iteration shows an array of blue sandsplines, gradually increasing in noise values to produce some successful splines.',
       options: [
-        { value: 'sandsplines1', label: 'Sandsplines 1', func: sandsplines1 },
-        { value: 'sandsplines2', label: 'Sandsplines 2', func: sandsplines2 },
-        { value: 'sandsplines3', label: 'Sandsplines 3', func: sandsplines3 },
-        { value: 'sandsplines4', label: 'Sandsplines 4', func: sandsplines4 }
+        { value: 'sandsplines1', label: 'Sandsplines 1', func: sandsplines1, desc: 'The first iteration shows a rainbow of coloured sandsplines with highly erratic noise values towards the end of the spline.' },
+        { value: 'sandsplines2', label: 'Sandsplines 2', func: sandsplines2, desc: 'The second iteration shows yellow sandsplines with an increase of erratic behaviour. This iteration somewhat resembles ancient calligraphy.' },
+        { value: 'sandsplines3', label: 'Sandsplines 3', func: sandsplines3, desc: 'The third iteration shows a vastly incomprehensible array of sandsplines, with a much-too-high noise value.' },
+        { value: 'sandsplines4', label: 'Sandsplines 4', func: sandsplines4, desc: 'The final iteration shows an array of blue sandsplines, gradually increasing in noise values to produce some successful splines.' }
       ]
 		};
 	}
@@ -30,7 +31,8 @@ class Sandsplines extends Component {
   changeSketch(val) {
     this.setState({
       sketchValue: val.func,
-      value: val.value
+      value: val.value,
+      desc: val.desc
     });
   }
 
@@ -39,17 +41,19 @@ class Sandsplines extends Component {
       <div>
         <Navigation />
 
-        <main>
-          <Header heading={this.state.heading} subhead={this.state.subhead}/>
-            <div className="wrap">
-              <Select
-                name="form-field-name"
-                clearable={this.state.clearable}
-                value={this.state.value}
-                options={this.state.options}
-                onChange={this.changeSketch}
-              />
-            </div>
+        <main className="wrap">
+          <Header heading={this.state.heading} />
+          <p>{this.state.subhead}</p>
+          <p>{this.state.desc}</p>
+          <div className="wrap">
+            <Select
+              name="form-field-name"
+              clearable={this.state.clearable}
+              value={this.state.value}
+              options={this.state.options}
+              onChange={this.changeSketch}
+            />
+          </div>
           <section className="flex flex-center">
             <P5Wrapper sketch={this.state.sketchValue} />
           </section>

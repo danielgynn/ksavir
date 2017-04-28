@@ -9,7 +9,8 @@ class Joy extends Component {
 		super(props);
 		this.state = {
       heading: 'Deep Joy',
-      subhead: 'Reload the page to redraw, or press ENTER to save.'
+      subhead: 'Reload the page to redraw the canvas, or press ENTER to save the output.',
+      desc: 'A Perlin noise and B-spline rendering of the Joy Division album cover \'Unknown Pleasures\'.'
 		};
 	}
 
@@ -18,8 +19,10 @@ class Joy extends Component {
       <div>
         <Navigation />
 
-        <main>
-          <Header heading={this.state.heading} subhead={this.state.subhead}/>
+        <main className="wrap">
+          <Header heading={this.state.heading} />
+          <p>{this.state.subhead}</p>
+          <p>{this.state.desc}</p>
           <section className="flex flex-center">
             <P5Wrapper sketch={joy} />
           </section>

@@ -19,11 +19,11 @@ class Generators extends Component {
         <Header heading={this.state.heading} subhead={this.state.subhead}/>
 
         <div className="flex flex-column wrap">
-          <Generator title="Perlin Flow Field" link="/generators/flowfield" desc="Perlin Noise Flow Field simulator. Generates random noise to simulate flocking behaviour and produces a wavy/smoky output."/>
-          <Generator title="Perlin" link="/generators/perlin" desc="A Rorschach generator built using Perlin noise to render lines." />
+          <Generator title="Vector Flow Field" link="/generators/flowfield" desc="Vector Flow Field simulator, built with Perlin noise. Generates random noise to simulate flocking/flowing behaviour and produces a wavy/smoky output."/>
+          <Generator title="Perlin Noise Lines" link="/generators/perlin" desc="A Perlin noise generator that renders vertical or horizontal lines to produce a 3D fabric-like effect." />
           <Generator title="Sandsplines" link="/generators/sandsplines" desc="Renders horizontal lines that gradually increase in noise. Based on the concept of B-splines."/>
-          <Generator title="Joy" link="/generators/joy" desc="A Perlin noise and B-spline rendering of the Joy Division album cover 'Unknown Pleasures'."/>
-          <Generator title="Rotator" link="/generators/rotator" desc="Renders a 3D circular object consisting of lines rotating from specific points." />
+          <Generator title="Perlin Joy" link="/generators/joy" desc="A Perlin noise and B-spline rendering of the Joy Division album cover 'Unknown Pleasures'."/>
+          <Generator title="3D Rotator" link="/generators/rotator" desc="Renders a 3D circular object consisting of lines rotating from specific points." />
         </div>
       </div>
     )
